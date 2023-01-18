@@ -6,7 +6,6 @@ import Insert from './Component/Insert'
 import Edit from './Component/Edit'
 import { useState, useEffect } from 'react';
 import SingleView from './Component/Single_View';
-import Insert2 from './localstorage/insert'
 
 function App() {
   const [oldvalue, setOldvalue] = useState([]);
@@ -78,10 +77,6 @@ function App() {
             <Route exact path="/single-view/:id" element={<SingleView value={value}/>} />
             <Route exact path="/insert" element={<Insert onSubmit={onSubmit} />} />
             <Route exact path="/edit/:id" element={<Edit onEdit={onEdit} value={value} />} />
-
-
-
-            <Route exact path="insert2" element={<Insert2 />} />
           </Routes>
         </BrowserRouter>
       </header>
